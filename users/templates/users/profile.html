@@ -8,6 +8,12 @@
         <h2 class="account-heading"> {{ user.username }} </h2>
         <p class="text-secondary"> {{ user.first_name }} {{ user.last_name }} </p>
         <p class="text-secondary"> {{ user.email }} </p>
+        <p class="text-secondary"> {{ user.profile.role }} </p>
+        {% if user.profile.district %}
+        <p class="text-secondary"> {{ user.profile.district }}, Bangladesh </p>
+        {% else %}
+        <p style="color:red;"> Please update your profile! </p>
+        {% endif %}
       </div>
     </div>
     <!-- FORM HERE -->
